@@ -8,76 +8,69 @@
     </head>
     <body>
         <main class="wrapper">
-            <section class="container">
-                <header class="header-container">
-                    <div class="header-first-row">
-                        <div class="header-search">
-                            <img
-                                class="search-icon"
-                                src="images/icons/search-outline.svg"
-                                alt="search"
-                            />
-                            <input
-                                type="search"
-                                placeholder="Search"
-                                name="search"
-                                class="search"
-                            />
-                        </div>
+            <section class="wrapper__container">
+                <header class="header">
+                    <div class="header__row--first">
+                        <input type="text" id="header__search--input" />
+                        <img
+                            class="search"
+                            src="images/icons/search-outline.svg"
+                            alt="search"
+                        />
 
-                        <div class="header-first-row-item">
+                        <div class="header__user-info">
                             <img
                                 src="images/icons/notifications-outline.svg"
                                 alt="notification"
+                                class="notification__icon"
                             />
-
                             <img
-                                class="morgan"
+                                class="header__user-avatar"
                                 src="images/morgan.png"
                                 alt="morgan"
                             />
-                            Morgan Oakley
+                            <span class="header__user-name">Morgan Oakley</span>
                         </div>
                     </div>
 
-                    <div class="header-second-row">
-                        <div class="introduction">
+                    <div class="header__row--second">
+                        <div class="header__intro">
                             <img
-                                class="morgan"
+                                class="header__intro-avatar"
                                 src="images/morgan.png"
                                 alt="morgan"
                             />
-                            <p class="greetings">
-                                Hi There,<span class="name"
-                                    >Morgan Oakley
-                                </span>
+                            <p class="header__greetings">
+                                Hi There,<span class="header__greetings-name"
+                                    >Morgan Oakley (@morgan)</span
+                                >
                             </p>
                         </div>
-                        <ul class="header-second-row-nav-list">
-                            <li class="header-second-row-item">New</li>
-                            <li class="header-second-row-item">Upload</li>
-                            <li class="header-second-row-item">Share</li>
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">New</li>
+                            <li class="header__nav-item">Upload</li>
+                            <li class="header__nav-item">Share</li>
                         </ul>
                     </div>
                 </header>
-                <section class="side-bar">
-                    <sidebar class="dashboard">
-                        <ul class="sidebar-nav-list">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-nav-link">
+                <section class="sidebar">
+                    <nav class="sidebar__dashboard">
+                        <ul class="sidebar__nav-list">
+                            <li class="sidebar__nav-item">
+                                <a href="#" class="sidebar__nav-link">
                                     <img src="images/icons/logo.svg" />
                                     Dashboard
                                 </a>
                             </li>
                         </ul>
-                    </sidebar>
+                    </nav>
 
-                    <div class="home">
-                        <ul class="sidebar-nav-list">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-nav-link">
+                    <div class="sidebar__section sidebar__section--home">
+                        <ul class="sidebar__nav-list">
+                            <li class="sidebar__nav-item">
+                                <a href="#" class="sidebar__nav-link">
                                     <img
-                                        class="home-icon"
+                                        class="sidebar__icon sidebar__icon--home"
                                         src="images/icons/home-outline.svg"
                                         alt="home"
                                     />
@@ -87,11 +80,12 @@
                         </ul>
                     </div>
 
-                    <div class="profile">
-                        <ul class="sidebar-nav-list">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-nav-link">
+                    <div class="sidebar__section sidebar__section--profile">
+                        <ul class="sidebar__nav-list">
+                            <li class="sidebar__nav-item">
+                                <a href="#" class="sidebar__nav-link">
                                     <img
+                                        class="sidebar__icon sidebar__icon--profile"
                                         src="images/icons/person-circle-outline.svg"
                                         alt="profile"
                                     />
@@ -100,11 +94,12 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="messages">
-                        <ul class="sidebar-nav-list">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-nav-link">
+                    <div class="sidebar__section sidebar__section--messages">
+                        <ul class="sidebar__nav-list">
+                            <li class="sidebar__nav-item">
+                                <a href="#" class="sidebar__nav-link">
                                     <img
+                                        class="sidebar__icon sidebar__icon--messages"
                                         src="images/icons/chatbox-ellipses-outline.svg"
                                         alt="messages"
                                     />
@@ -113,11 +108,12 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="history">
-                        <ul class="sidebar-nav-list">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-nav-link">
+                    <div class="sidebar__section sidebar__section--history">
+                        <ul class="sidebar__nav-list">
+                            <li class="sidebar__nav-item">
+                                <a href="#" class="sidebar__nav-link">
                                     <img
+                                        class="sidebar__icon sidebar__icon--history"
                                         src="images/icons/time-outline.svg"
                                         alt="history"
                                     />
@@ -126,11 +122,12 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="tasks">
-                        <ul class="sidebar-nav-list">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-nav-link">
+                    <div class="sidebar__section sidebar__section--tasks">
+                        <ul class="sidebar__nav-list">
+                            <li class="sidebar__nav-item">
+                                <a href="#" class="sidebar__nav-link">
                                     <img
+                                        class="sidebar__icon sidebar__icon--tasks"
                                         src="images/icons/documents-outline.svg"
                                         alt="tasks"
                                     />
@@ -139,11 +136,12 @@
                             </li>
                         </ul>
                     </div>
-                    <sidebar class="communities">
-                        <ul class="sidebar-nav-list">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-nav-link">
+                    <nav class="sidebar__communities">
+                        <ul class="sidebar__nav-list">
+                            <li class="sidebar__nav-item">
+                                <a href="#" class="sidebar__nav-link">
                                     <img
+                                        class="sidebar__icon sidebar__icon--communities"
                                         src="images/icons/people-outline.svg"
                                         alt="communities"
                                     />
@@ -151,12 +149,13 @@
                                 </a>
                             </li>
                         </ul>
-                    </sidebar>
-                    <div class="settings">
-                        <ul class="sidebar-nav-list">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-nav-link">
+                    </nav>
+                    <div class="sidebar__section sidebar__section--settings">
+                        <ul class="sidebar__nav-list">
+                            <li class="sidebar__nav-item">
+                                <a href="#" class="sidebar__nav-link">
                                     <img
+                                        class="sidebar__icon sidebar__icon--settings"
                                         src="images/icons/settings-outline.svg"
                                         alt="settings"
                                     />
@@ -165,11 +164,12 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="support">
-                        <ul class="sidebar-nav-list">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-nav-link">
+                    <div class="sidebar__section sidebar__section--support">
+                        <ul class="sidebar__nav-list">
+                            <li class="sidebar__nav-item">
+                                <a href="#" class="sidebar__nav-link">
                                     <img
+                                        class="sidebar__icon sidebar__icon--support"
                                         src="images/icons/help-circle-outline.svg"
                                         alt="support"
                                     />
@@ -178,11 +178,12 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="privacy">
-                        <ul class="sidebar-nav-list">
-                            <li class="sidebar-item">
-                                <a href="#" class="sidebar-nav-link">
+                    <div class="sidebar__section sidebar__section--privacy">
+                        <ul class="sidebar__nav-list">
+                            <li class="sidebar__nav-item">
+                                <a href="#" class="sidebar__nav-link">
                                     <img
+                                        class="sidebar__icon sidebar__icon--privacy"
                                         src="images/icons/shield-checkmark-outline.svg"
                                         alt="privacy"
                                     />
@@ -190,6 +191,42 @@
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                </section>
+
+                <section class="project__content">
+                    <h3>Your Projects</h3>
+                    <div class="card__container">
+                        <div class="card">
+                            <h4>Less Cool Project</h4>
+                            A web-based platform that helps users manage their
+                            daily tasks more efficiently. With a user-friendly
+                            interface and robust features, this project aims to
+                            simplify task management for busy professionals.
+
+                            <div class="button__links">
+                                <button>
+                                    <img
+                                        src="images/icons/star-plus-outline.svg"
+                                        alt="star"
+                                    />
+                                </button>
+
+                                <button>
+                                    <img
+                                        src="images/icons/eye-plus-outline.svg"
+                                        alt="eye-plus"
+                                    />
+                                </button>
+
+                                <button>
+                                    <img
+                                        src="images/icons/source-fork.svg"
+                                        alt="source-pork"
+                                    />
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </section>

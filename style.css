@@ -12,11 +12,13 @@
     --search-bar-color: #e2e8f0;
     --morgan-bg-color: #facc15;
     --nav-list-bg-color: #1992d4;
+
+    --project-bg-color: #d3d3d3;
+    --main-card-bg-color: #ffffff;
 }
 
 *,
-a,
-input {
+a {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,17 +33,24 @@ ul,
 li {
     list-style-type: none;
 }
+
 body {
     font-family: var(--default-ff);
 }
 
-.container {
+button {
+    width: 40%;
+    background: none;
+    border: none;
+}
+
+.wrapper__container {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
 }
 
-.side-bar {
+.sidebar {
     background-color: var(--sidebar-bg-color);
     grid-column: 1 / 2;
     grid-row: 1 / 4;
@@ -54,48 +63,52 @@ body {
     padding-block-start: 32px;
 }
 
-.header-container {
-    display: flex;
-    flex-direction: column;
+.header {
     margin-inline-start: 56px;
     margin-block-start: 2rem;
+    margin-block-end: 2rem;
 }
 
-.header-container .header-first-row {
+.header__row--first {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
-.header-search .search {
-    width: 90%;
-    height: 100%;
+.header__row--first #header__search--input {
+    width: 100%;
+    height: 3rem;
     background-color: var(--search-bar-color);
     border: none;
     border-radius: 8px;
-    padding-inline: 3.2rem;
-    font-size: 1rem;
+    position: relative;
 }
 
-.search-icon {
-    position: absolute;
+.header__row--first .search {
     padding-inline-start: 1.2rem;
+    position: absolute;
 }
 
-.header-first-row-item {
+.header__row--first .header__user-info {
     display: flex;
-    align-items: center;
-    gap: 12px;
 }
 
-.header-first-row-item .morgan {
+.header__user-info .header__user-avatar {
     width: 12%;
     padding: 5px;
     background-color: var(--morgan-bg-color);
     border-radius: 35px;
 }
 
-.header-second-row {
+.header__user-info {
+    align-items: center;
+    justify-content: center;
+}
+
+.header__user-info .notification__icon {
+    margin-inline-end: 24px;
+}
+
+.header__row--second {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -103,7 +116,7 @@ body {
     margin-inline-end: 56px;
 }
 
-.header-second-row .morgan {
+.header__intro-avatar {
     width: 68px;
     padding: 5px;
     background-color: var(--morgan-bg-color);
@@ -111,28 +124,28 @@ body {
     margin-inline-end: 2rem;
 }
 
-.header-second-row .introduction {
+.header__intro {
     display: flex;
     align-items: center;
 }
 
-.introduction .greetings {
+.header__greetings {
     font-size: 1rem;
     font-weight: bold;
 }
 
-.introduction .name {
+.header__greetings-name {
     font-size: 24px;
     display: block;
     margin-block-start: 8px;
 }
 
-.header-second-row .header-second-row-nav-list {
+.header__nav-list {
     display: flex;
     gap: 2rem;
 }
 
-.header-second-row-nav-list .header-second-row-item {
+.header__nav-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,18 +156,18 @@ body {
     color: #ffffff;
 }
 
-.sidebar-item .sidebar-nav-link {
+.sidebar__nav-link {
     display: flex;
     align-items: center;
     position: relative;
     gap: 8px;
 }
 
-.side-bar .dashboard {
+.sidebar__dashboard {
     margin-block-end: 4rem;
 }
 
-.home .sidebar-nav-link {
+.sidebar__section--home .sidebar__nav-link {
     background-color: var(--home-bg-color);
     max-width: 95%;
     height: 37px;
@@ -162,6 +175,49 @@ body {
     color: var(--home-fc);
 }
 
-.side-bar .communities {
+.sidebar__communities {
     margin-block-end: 2rem;
+}
+
+.project__content {
+    background-color: var(--project-bg-color);
+    padding-inline-start: 2rem;
+    padding-inline-end: 2rem;
+    padding-block-start: 2rem;
+    padding-block-end: 2rem;
+}
+
+.project__content h3 {
+    margin-block-end: 1rem;
+}
+
+.project__content .card__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 24px;
+}
+
+.card__container .card {
+    display: flex;
+    width: 26rem;
+    height: 13.5rem;
+    flex-direction: column;
+    position: relative;
+    gap: 8px;
+    background-color: var(--main-card-bg-color);
+    padding-inline-start: 30px;
+    padding-inline-end: 20px;
+    padding-block-start: 30px;
+    padding-block-end: 30px;
+}
+
+.card .button__links {
+    display: flex;
+}
+
+.card img {
+    position: absolute;
+    width: 15%;
+    height: 15%;
 }
