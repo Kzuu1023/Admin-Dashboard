@@ -189,7 +189,7 @@ button {
 .project__content {
     display: grid;
     max-width: 100%;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .project__content h3 {
@@ -200,7 +200,7 @@ button {
 .project__content .card__container {
     display: grid;
     width: 100%;
-    grid-column: 1 / 4;
+    grid-column: 1 / 3;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 24px;
     column-gap: 24px;
@@ -220,6 +220,10 @@ button {
     padding-block: 30px;
 }
 
+.card__container .card p {
+    font-size: 14px;
+    margin-block: 0rem 1rem;
+}
 .card .button__links {
     display: flex;
     justify-content: flex-end;
