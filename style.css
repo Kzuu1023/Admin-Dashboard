@@ -179,45 +179,71 @@ button {
     margin-block-end: 2rem;
 }
 
-.project__content {
+.content__container {
+    max-width: 100%;
     background-color: var(--project-bg-color);
-    padding-inline-start: 2rem;
-    padding-inline-end: 2rem;
-    padding-block-start: 2rem;
-    padding-block-end: 2rem;
+    padding-inline: 2rem 2rem;
+    padding-block: 2rem 2rem;
+}
+
+.project__content {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .project__content h3 {
+    grid-column: 1 / 1;
     margin-block-end: 1rem;
 }
 
 .project__content .card__container {
     display: grid;
+    width: 100%;
+    grid-column: 1 / 4;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     row-gap: 24px;
+    column-gap: 24px;
+    margin-inline: 0rem 2rem;
 }
 
 .card__container .card {
     display: flex;
-    width: 26rem;
+    width: 100%;
     height: 13.5rem;
+    border-radius: 8px;
+    background-color: var(--main-card-bg-color);
     flex-direction: column;
     position: relative;
     gap: 8px;
-    background-color: var(--main-card-bg-color);
-    padding-inline-start: 30px;
-    padding-inline-end: 20px;
-    padding-block-start: 30px;
-    padding-block-end: 30px;
+    padding-inline: 30px 20px;
+    padding-block: 30px;
 }
 
 .card .button__links {
     display: flex;
+    justify-content: flex-end;
+    gap: 28px;
+    margin-inline-end: 20px;
 }
 
-.card img {
-    position: absolute;
-    width: 15%;
-    height: 15;
+.button__links button {
+    width: 8%;
+}
+
+.right__side__card {
+    display: flex;
+    flex-direction: column;
+}
+
+.right__side__card-container {
+    margin-inline: 2rem 0rem;
+}
+.right__side__card-container .card {
+    width: 100%;
+    height: 60%;
+    background-color: var(--main-card-bg-color);
+    padding-inline: 26px;
+    padding-block: 31px;
+    border-radius: 8px;
 }
