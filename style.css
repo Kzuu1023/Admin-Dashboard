@@ -47,7 +47,7 @@ button {
 .wrapper__container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
 }
 
 .sidebar {
@@ -180,6 +180,8 @@ button {
 }
 
 .content__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     max-width: 100%;
     background-color: var(--project-bg-color);
     padding-inline: 2rem 2rem;
@@ -187,13 +189,10 @@ button {
 }
 
 .project__content {
-    display: grid;
-    max-width: 100%;
-    grid-template-columns: repeat(3, 1fr);
+    grid-column: 1 / 3;
 }
 
 .project__content h3 {
-    grid-column: 1 / 1;
     margin-block-end: 1rem;
 }
 
@@ -235,19 +234,67 @@ button {
     width: 8%;
 }
 
-.right__side__card {
-    display: flex;
-    flex-direction: column;
-}
-
 .right__side__card-container {
+    grid-column: 3 / 4;
     margin-inline: 2rem 0rem;
 }
-.right__side__card-container .card {
+
+.right__side__card .announcement__content {
+    display: grid;
+    gap: 2rem;
+}
+
+.right__side__card-container h3 {
+    margin-block-end: 1rem;
+}
+.right__side__card h4 {
+    margin-bottom: 8px;
+}
+.right__side__card .gray__line {
+    height: 2px;
+    background-color: #e0e0e0;
+    width: 100%;
+}
+
+.right__side__card-container .announcement__content,
+.right__side__card-container .trending {
     width: 100%;
     height: 60%;
     background-color: var(--main-card-bg-color);
     padding-inline: 26px;
     padding-block: 31px;
     border-radius: 8px;
+}
+
+.right__side__card .trending {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right__side__card .morgan {
+    width: 20%;
+    padding: 5px;
+    background-color: var(--morgan-bg-color);
+    border-radius: 35px;
+}
+
+.trending__container .trending {
+    display: flex;
+    gap: 1rem;
+}
+
+.trending__container h3 {
+    margin-block-start: 1rem;
+}
+
+.trending .trending__content {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.trending__content span {
+    display: block;
+    margin-block-end: 4px;
 }
