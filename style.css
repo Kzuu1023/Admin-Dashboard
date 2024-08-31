@@ -180,6 +180,7 @@ button {
 .sidebar__nav-link .sidebar__icon--home {
     color: var(--home-fc);
 }
+
 .sidebar__communities {
     margin-block-end: 2rem;
 }
@@ -241,6 +242,7 @@ button {
 }
 .card .button__links {
     display: flex;
+    margin-block: 0.5rem 0rem;
     justify-content: flex-end;
     gap: 28px;
     margin-inline-end: 20px;
