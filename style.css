@@ -154,8 +154,11 @@ button {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding-inline: 1rem 0rem;
     padding-block-start: 2rem;
+}
+
+.sidebar .sidebar__section {
+    padding-inline: 1.4rem 0rem;
 }
 
 .sidebar__nav-link {
@@ -170,15 +173,26 @@ button {
 }
 
 .sidebar__section--home .sidebar__nav-link {
+    color: var(--home-fc);
+}
+
+.sidebar__section--home .sidebar__nav-item {
+    display: flex;
     background-color: var(--home-bg-color);
     max-width: 90%;
     height: 37px;
     border-radius: 8px;
-    color: var(--home-fc);
+    padding-inline: 12px 0rem;
+    margin-inline: 12px 0rem;
 }
 
 .sidebar__nav-link .sidebar__icon--home {
-    color: var(--home-fc);
+    filter: invert(34%) sepia(95%) saturate(4069%) hue-rotate(172deg)
+        brightness(99%) contrast(104%);
+}
+
+.sidebar__nav-link .sidebar__icon--home::before {
+    content: "";
 }
 
 .sidebar__communities {
